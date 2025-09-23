@@ -1,0 +1,37 @@
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-900 hover:text-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 rounded">
+          <span class="inline-block w-8 h-8 bg-primary-600 text-white rounded grid place-items-center font-black">P</span>
+          <span class="sr-only">Home - </span>Petrobolos Games
+        </a>
+      </div>
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+        {% for item in site.nav %}
+        <a href="{{ item.url }}" class="text-slate-700 hover:text-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 rounded px-1 py-1">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-button" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile nav -->
+  <nav id="mobile-menu" class="md:hidden hidden border-t border-slate-200" aria-label="Primary mobile">
+    <div class="px-4 py-3 space-y-1">
+      {% for item in site.nav %}
+      <a href="{{ item.url }}" class="block rounded px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600">{{ item.title }}</a>
+      {% endfor %}
+      <button type="button" class="w-full rounded px-3 py-2 text-left text-base font-medium text-slate-700 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600" onclick="document.getElementById('menu-button').click()" aria-label="Close menu">Close Menu</button>
+    </div>
+  </nav>
+</header>

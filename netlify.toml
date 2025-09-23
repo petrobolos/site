@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Redirects or headers can be added here if needed

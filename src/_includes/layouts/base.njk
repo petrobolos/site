@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.titleSuffix }}{% if title %} – {{ title }}{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if ogTitle %}{{ ogTitle }}{% else %}{{ site.titleSuffix }}{% if title %} – {{ title }}{% endif %}{% endif %}">
+  <meta property="og:description" content="{% if ogDescription %}{{ ogDescription }}{% else %}{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{% if ogImage %}{{ ogImage }}{% else %}https://via.placeholder.com/1200x630.png?text=Petrobolos+Games{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.meta.twitter }}">
+  <meta name="twitter:title" content="{% if twitterTitle %}{{ twitterTitle }}{% else %}{{ site.titleSuffix }}{% if title %} – {{ title }}{% endif %}{% endif %}">
+  <meta name="twitter:description" content="{% if twitterDescription %}{{ twitterDescription }}{% else %}{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}{% endif %}">
+  <meta name="twitter:image" content="{% if twitterImage %}{{ twitterImage }}{% else %}https://via.placeholder.com/1200x630.png?text=Petrobolos+Games{% endif %}">
+
+  <!-- TailwindCSS CDN (minified) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+
+  <style>
+    /* Focus ring for keyboard navigation visibility */
+    :focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white text-slate-900">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 bg-primary-600 text-white px-3 py-2 rounded" href="#main">Skip to content</a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main" class="flex-1">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script>
+    // Mobile menu toggle with ARIA state management
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuButton && mobileMenu) {
+      function toggleMenu(force) {
+        const expanded = force !== undefined ? force : menuButton.getAttribute('aria-expanded') === 'false';
+        menuButton.setAttribute('aria-expanded', expanded);
+        mobileMenu.classList.toggle('hidden', !expanded);
+      }
+      menuButton.addEventListener('click', () => toggleMenu());
+      // Close with Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') toggleMenu(false);
+      });
+    }
+  </script>
+</body>
+</html>

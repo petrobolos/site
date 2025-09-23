@@ -1,0 +1,22 @@
+{
+  "name": "Petrobolos Games",
+  "titleSuffix": "Petrobolos Games",
+  "url": "https://example.com",
+  "meta": {
+    "description": "Petrobolos Games – Placeholder site built with Eleventy and Tailwind CSS.",
+    "image": "/static/og-placeholder.png",
+    "twitter": "@PetrobolosGames"
+  },
+  "nav": [
+    { "title": "Home", "url": "/" },
+    { "title": "Our Games", "url": "/games/" },
+    { "title": "About Us", "url": "/about/" },
+    { "title": "Contact", "url": "/contact/" }
+  ],
+  "social": {
+    "twitter": "https://twitter.com/",
+    "facebook": "https://facebook.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "github": "https://github.com/"
+  }
+}

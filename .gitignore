@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# Eleventy/SSG caches (if plugins/tools are used)
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Test coverage / reports (if added later)
+coverage/
+
+# Netlify local build state (if used)
+.netlify/
