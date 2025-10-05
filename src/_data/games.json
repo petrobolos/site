@@ -4,7 +4,7 @@
     "title": "Project Nimbus",
     "subtitle": "Skybound Adventure",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description placeholder.",
-    "image": "https://via.placeholder.com/800x450.png?text=Project+Nimbus",
+    "image": "/static/petrobolos-silver.avif",
     "url": "/games/#project-nimbus"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Starfall Odyssey",
     "subtitle": "Galactic Journey",
     "description": "Suspendisse potenti. Donec luctus nisl at massa aliquet, non ultrices lectus consectetur.",
-    "image": "https://via.placeholder.com/800x450.png?text=Starfall+Odyssey",
+    "image": "/static/petrobolos-silver.avif",
     "url": "/games/#starfall-odyssey"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Echoes of Ember",
     "subtitle": "Mystic Realms",
     "description": "Integer ac dui vitae augue egestas interdum. Placeholder copy for a game description.",
-    "image": "https://via.placeholder.com/800x450.png?text=Echoes+of+Ember",
+    "image": "/static/petrobolos-silver.avif",
     "url": "/games/#echoes-of-ember"
   }
 ]
