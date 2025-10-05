@@ -1,0 +1,44 @@
+[
+  {
+    "id": "oliver-earl",
+    "name": "Oliver Earl",
+    "role": "Founder & Lead Developer",
+    "bio": "Designs and implements gameplay systems and features that bring our experiences to life.",
+    "image": "/static/petrobolos-silver.avif"
+  },
+  {
+    "id": "shane-fenton",
+    "name": "Shane Fenton",
+    "role": "Associate Director & Creative Technologist",
+    "bio": "Juggles code and creativity, helping turn bold ideas into playable reality.",
+    "image": "/static/petrobolos-silver.avif"
+  },
+  {
+    "id": "jordan-harris",
+    "name": "Jordan Harris",
+    "role": "Lead Gameplay Artist",
+    "bio": "Transforms art into interactive magic, creating tools and pipelines that make our game shine.",
+    "image": "/static/petrobolos-silver.avif"
+  },
+  {
+    "id": "alex-rivers",
+    "name": "Alex Rivers",
+    "role": "Lead Sound Designer / Composer",
+    "bio": "Shapes every moment with immersive sound and music that gives our games their soul.",
+    "image": "/static/petrobolos-silver.avif"
+  },
+  {
+    "id": "thomas-tunney",
+    "name": "Thomas Tunney",
+    "role": "UI / UX Designer",
+    "bio": "Crafts seamless, intuitive interfaces that let players dive straight into the fun across all devices.",
+    "image": "/static/petrobolos-silver.avif"
+  },
+  {
+    "id": "thomas-earl",
+    "name": "Thomas Earl",
+    "role": "2D Artist",
+    "bio": "Brings characters and worlds to life with bold, expressive visuals that spark imagination.",
+    "image": "/static/petrobolos-silver.avif"
+  }
+]
