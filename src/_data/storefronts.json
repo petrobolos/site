@@ -1,0 +1,14 @@
+{
+  "steam": {
+    "name": "Steam",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/steam.svg"
+  },
+  "epic": {
+    "name": "Epic Games",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@16.7.0/icons/epicgames.svg"
+  },
+  "itch": {
+    "name": "Itch",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@16.7.0/icons/itchdotio.svg"
+  }
+}

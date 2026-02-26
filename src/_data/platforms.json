@@ -1,0 +1,34 @@
+{
+  "windows": {
+    "name": "Windows",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/windows.svg"
+  },
+  "macos": {
+    "name": "macOS",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/apple.svg"
+  },
+  "linux": {
+    "name": "Linux",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@16.7.0/icons/linux.svg"
+  },
+  "android": {
+    "name": "Android",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/android2.svg"
+  },
+  "ios": {
+    "name": "iOS",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/apple.svg"
+  },
+  "playstation": {
+    "name": "PlayStation\u00ae",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/playstation.svg"
+  },
+  "xbox": {
+    "name": "Xbox\u00ae",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/xbox.svg"
+  },
+  "nintendo": {
+    "name": "Nintendo\u00ae",
+    "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/nintendo-switch.svg"
+  }
+}
