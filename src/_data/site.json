@@ -4,7 +4,7 @@
   "url": "https://www.petrobolos.com",
   "meta": {
     "description": "Petrobolos Games – Placeholder site built with Eleventy and Tailwind CSS.",
-    "image": "/static/og-placeholder.png",
+    "image": "/static/petrobolos-silver.webp",
     "twitter": "@PetrobolosGames"
   },
   "nav": [

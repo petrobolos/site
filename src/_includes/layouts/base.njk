@@ -12,7 +12,7 @@
   <meta property="og:title" content="{% if ogTitle %}{{ ogTitle }}{% else %}{{ site.titleSuffix }}{% if title %} – {{ title }}{% endif %}{% endif %}">
   <meta property="og:description" content="{% if ogDescription %}{{ ogDescription }}{% else %}{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{% if ogImage %}{{ ogImage }}{% else %}/static/petrobolos-silver.avif{% endif %}">
+  <meta property="og:image" content="{% if ogImage %}{{ ogImage }}{% else %}/static/petrobolos-silver.webp{% endif %}">
   <meta property="og:site_name" content="{{ site.name }}">
 
   <!-- Twitter Card -->
@@ -20,7 +20,7 @@
   <meta name="twitter:site" content="{{ site.meta.twitter }}">
   <meta name="twitter:title" content="{% if twitterTitle %}{{ twitterTitle }}{% else %}{{ site.titleSuffix }}{% if title %} – {{ title }}{% endif %}{% endif %}">
   <meta name="twitter:description" content="{% if twitterDescription %}{{ twitterDescription }}{% else %}{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}{% endif %}">
-  <meta name="twitter:image" content="{% if twitterImage %}{{ twitterImage }}{% else %}/static/petrobolos-silver.avif{% endif %}">
+  <meta name="twitter:image" content="{% if twitterImage %}{{ twitterImage }}{% else %}/static/petrobolos-silver.webp{% endif %}">
 
   <!-- TailwindCSS CDN (minified) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>

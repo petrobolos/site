@@ -5,14 +5,14 @@
     "subtitle": "Galactic Journey",
     "description": "Suspendisse potenti. Donec luctus nisl at massa aliquet, non ultrices lectus consectetur.",
     "image": "/static/games/a-dog-tale/library.jpg",
-    "url": "/games/#a-dog-tale"
+    "url": "/games/a-dog-tale/"
   },
   {
     "id": "project-nimbus",
     "title": "Project Nimbus",
     "subtitle": "Skybound Adventure",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description placeholder.",
-    "image": "/static/petrobolos-silver.avif",
+    "image": "/static/petrobolos-silver.webp",
     "url": "/games/#project-nimbus"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Echoes of Ember",
     "subtitle": "Mystic Realms",
     "description": "Integer ac dui vitae augue egestas interdum. Placeholder copy for a game description.",
-    "image": "/static/petrobolos-silver.avif",
+    "image": "/static/petrobolos-silver.webp",
     "url": "/games/#echoes-of-ember"
   }
 ]
