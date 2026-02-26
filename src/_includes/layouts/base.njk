@@ -22,10 +22,27 @@
   <meta name="twitter:description" content="{% if twitterDescription %}{{ twitterDescription }}{% else %}{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}{% endif %}">
   <meta name="twitter:image" content="{% if twitterImage %}{{ twitterImage }}{% else %}/static/petrobolos-silver.webp{% endif %}">
 
+  <script>
+    (function () {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('theme');
+      } catch (e) {
+        savedTheme = null;
+      }
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <!-- TailwindCSS CDN (minified) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -64,7 +81,7 @@
     :focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col bg-white text-slate-900">
+<body class="min-h-screen flex flex-col bg-white text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
   <a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 bg-primary-600 text-white px-3 py-2 rounded" href="#main">Skip to content</a>
 
   {% include "partials/header.njk" %}
@@ -78,6 +95,31 @@
   <script>
     const menuButton = document.getElementById('menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const themeButtons = document.querySelectorAll('[data-theme-toggle]');
+    const themeLabels = document.querySelectorAll('[data-theme-label]');
+    const root = document.documentElement;
+
+    function syncThemeLabels() {
+      const isDark = root.classList.contains('dark');
+      themeLabels.forEach((label) => {
+        label.textContent = isDark ? 'Light mode' : 'Dark mode';
+      });
+    }
+
+    function toggleTheme() {
+      root.classList.toggle('dark');
+      const isDark = root.classList.contains('dark');
+      try {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+      syncThemeLabels();
+    }
+
+    themeButtons.forEach((button) => {
+      button.addEventListener('click', toggleTheme);
+    });
+
+    syncThemeLabels();
 
     if (menuButton && mobileMenu) {
       function toggleMenu(force) {

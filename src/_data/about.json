@@ -1,13 +1,13 @@
 {
   "intro": {
     "title": "About Petrobolos Games",
-    "subtitle": "We’re an indie studio focused on crafting engaging experiences. This is placeholder content modeled after the layout of the live site."
+    "subtitle": "We are a compact indie studio building expressive games with strong atmosphere, intentional mechanics, and platform-ready production."
   },
   "mission": {
     "title": "Our Mission",
     "paragraphs": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Integer et consequat dolor. Donec commodo justo orci, a tempor massa dictum at.",
-      "Nulla facilisi. Vestibulum sit amet lorem et urna cursus commodo. Praesent a mi nec neque vestibulum imperdiet. Phasellus venenatis elit vitae nisl vehicula, in mattis dui egestas."
+      "We design character-driven experiences that balance emotional storytelling with tactile, replayable systems. Every feature is scoped for quality and clarity.",
+      "From early prototypes through launch planning, our team aligns art, engineering, design, and audio around one goal: memorable worlds that play as good as they look."
     ],
     "image": {
       "src": "/static/petrobolos-dark.jpg",

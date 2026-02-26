@@ -1,34 +1,53 @@
 {% macro page_intro(title, subtitle) %}
-<header class="mb-10">
-  <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">{{ title }}</h1>
-  <p class="mt-3 text-slate-600 max-w-3xl">{{ subtitle }}</p>
+<header class="relative mb-12 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+  <div class="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-primary-200/60 blur-2xl dark:bg-primary-500/20" aria-hidden="true"></div>
+  <h1 class="relative text-3xl font-extrabold text-slate-900 md:text-4xl dark:text-white">{{ title }}</h1>
+  <p class="relative mt-3 max-w-3xl text-slate-600 dark:text-slate-300">{{ subtitle }}</p>
 </header>
 {% endmacro %}
 
 {% macro mission_section(title, paragraphs, image) %}
-<div class="grid gap-10 lg:grid-cols-2 items-start">
-  <div>
-    <h2 class="text-2xl font-bold text-slate-900">{{ title }}</h2>
+<div class="grid items-start gap-10 lg:grid-cols-[1.2fr_1fr]">
+  <div class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{{ title }}</h2>
     {% for paragraph in paragraphs %}
-    <p class="mt-3 text-slate-700">{{ paragraph }}</p>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">{{ paragraph }}</p>
     {% endfor %}
+    <div class="mt-6 grid gap-3 sm:grid-cols-2 text-sm">
+      <div class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 dark:border-slate-700 dark:bg-slate-800/60 dark:text-slate-200">
+        Narrative-first design
+      </div>
+      <div class="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 dark:border-slate-700 dark:bg-slate-800/60 dark:text-slate-200">
+        Platform-focused delivery
+      </div>
+    </div>
   </div>
   <div>
-    <img src="{{ image.src }}" alt="{{ image.alt }}" class="w-full h-auto rounded-lg shadow">
+    <img src="{{ image.src }}" alt="{{ image.alt }}" class="h-full w-full rounded-2xl border border-slate-200 object-cover shadow-sm dark:border-slate-800">
   </div>
 </div>
 {% endmacro %}
 
 {% macro team_section(team_members, heading='Our Team') %}
 <div class="mt-16">
-  <h2 class="text-2xl font-bold text-slate-900">{{ heading }}</h2>
+  <h2 class="text-2xl font-bold text-slate-900 dark:text-white">{{ heading }}</h2>
   <div class="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
     {% for member in team_members %}
-    <article id="{{ member.id }}" class="bg-white rounded-lg shadow-sm ring-1 ring-slate-200 p-6">
+    <article id="{{ member.id }}" class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800">
       <img src="{{ member.image }}" alt="Photo of {{ member.name }}" class="w-24 h-24 rounded-full object-cover">
-      <h3 class="mt-4 text-lg font-semibold text-slate-900">{{ member.name }}</h3>
-      <p class="text-sm text-slate-600">{{ member.role }}</p>
-      <p class="mt-3 text-sm text-slate-700">{{ member.bio }}</p>
+      <h3 class="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{{ member.name }}</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400">{{ member.role }}</p>
+      <p class="mt-3 text-sm text-slate-700 dark:text-slate-300">{{ member.bio }}</p>
+      {% if member.linkedin or member.x %}
+      <div class="mt-4 flex flex-wrap gap-2">
+        {% if member.linkedin %}
+        <a href="{{ member.linkedin }}" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:text-white">LinkedIn</a>
+        {% endif %}
+        {% if member.x %}
+        <a href="{{ member.x }}" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900 dark:border-slate-700 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:text-white">X</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </article>
     {% endfor %}
   </div>
