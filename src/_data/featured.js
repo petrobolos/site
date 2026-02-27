@@ -1,7 +1,16 @@
 const gameLibrary = require("./game-library");
 
-const featuredGame =
-  gameLibrary.find((game) => game.homepageFeature?.enabled) || gameLibrary[0];
+function pickFeaturedGame(games) {
+  const enabledFeatures = games.filter((game) => game.homepageFeature?.enabled);
+  if (enabledFeatures.length > 0) {
+    const randomIndex = Math.floor(Math.random() * enabledFeatures.length);
+    return enabledFeatures[randomIndex];
+  }
+
+  return games[0];
+}
+
+const featuredGame = pickFeaturedGame(gameLibrary);
 
 if (!featuredGame) {
   module.exports = {};

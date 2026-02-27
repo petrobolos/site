@@ -270,7 +270,7 @@ const gameLibrary = [
       description:
         "Let the light of the cosmos shine within you as you fight to survive never-ending guards, soldiers, and world-ending war machines.",
       background: "/static/games/escape-from-hong-kong/banner.jpg",
-      image: "/static/games/escape-from-hong-kong/logo.png",
+      image: "/static/games/escape-from-hong-kong/logo.webp",
       releaseDate: "Summer 2026",
     },
   },
