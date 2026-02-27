@@ -23,8 +23,6 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 ├─ netlify.toml               # Netlify build settings
 ├─ package.json               # Scripts: build:css / build / serve
 ├─ tailwind.config.js         # Tailwind theme/content configuration
-├─ scripts/
-│  └─ build-tailwind.sh       # Builds Tailwind CSS using standalone CLI
 ├─ src/
 │  ├─ _data/
 │  │  ├─ site.json           # Site metadata, nav items, social links
@@ -53,7 +51,7 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 - Node.js 18+ (20 recommended)
 
 ## Install
-No packages are required beyond Eleventy, which runs via npx in the scripts. However, running `npm install` will install a local Eleventy copy and helper tools.
+Install project dependencies (Eleventy + Tailwind + plugins):
 
 ```bash
 npm install
@@ -92,7 +90,8 @@ Tailwind is compiled locally before Eleventy builds the site:
 - Output: `src/static/css/tailwind.css`
 - Build command: `npm run build:css`
 
-The build script uses the Tailwind standalone CLI binary and caches it in `.cache/`.
+The build script uses the npm Tailwind CLI when available. In restricted environments where CLI installation is blocked, it falls back to a cached standalone binary in `.cache/`.
+Tailwind builds through the npm CLI (`@tailwindcss/cli`) via `npm run build:css`.
 
 ## Add/Update Games
 Edit `src/_data/game-library.js` to add or update game entries.
