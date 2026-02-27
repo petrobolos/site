@@ -15,18 +15,18 @@ const gameLibrary = [
       subtitle: "One man risks all to rescue his best friend.",
       description:
         "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
-      background: "/static/home/banner.jpg",
-      image: "/static/home/logo.webp",
+      background: "/static/games/a-dog-tale/banner.jpg",
+      image: "/static/games/a-dog-tale/logo.webp",
     },
     projectPage: {
       subtitle: "One man risks all to rescue his best friend.",
       hero: {
         eyebrow: "",
-        background: "/static/home/banner.jpg",
+        background: "/static/games/a-dog-tale/banner.jpg",
         description:
           "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
         logo: {
-          src: "/static/home/logo.webp",
+          src: "/static/games/a-dog-tale/logo.webp",
           alt: "A Dog Tale logo",
         },
         ctas: [
@@ -258,12 +258,21 @@ const gameLibrary = [
     title: "Escape from Hong Kong",
     catalog: {
       subtitle: "Bullet Heaven / Shoot 'em Up",
-      description: "Escaping from a 22nd century Hong Kong prison? No problem.",
+      description: "Democracy or Autocracy. You decide.",
       image: "/static/games/escape-from-hong-kong/library.jpg",
       url: "/games/#escape-from-hong-kong",
       status: "In Early Access Testing",
     },
     releasePlatforms: ["windows", "macos", "linux"],
+    homepageFeature: {
+      enabled: true,
+      subtitle: "Democracy or Autocracy. You decide.",
+      description:
+        "Let the light of the cosmos shine within you as you fight to survive never-ending guards, soldiers, and world-ending war machines.",
+      background: "/static/games/escape-from-hong-kong/banner.jpg",
+      image: "/static/games/escape-from-hong-kong/logo.png",
+      releaseDate: "Summer 2026",
+    },
   },
   {
     id: "nimbus-engine",
