@@ -1,13 +1,13 @@
 {
   "intro": {
-    "title": "About Petrobolos Games",
-    "subtitle": "We are a compact indie studio building expressive games with strong atmosphere, intentional mechanics, and platform-ready production."
+    "title": "We catapult ideas at the wall and see what sticks",
+    "subtitle": "Petrobolos Games is an independent games studio based in the UK. We take fun and innovative ideas and shape them into fun video game experiences for a wide range of audiences."
   },
   "mission": {
-    "title": "Our Mission",
+    "title": "Our History",
     "paragraphs": [
-      "We design character-driven experiences that balance emotional storytelling with tactile, replayable systems. Every feature is scoped for quality and clarity.",
-      "From early prototypes through launch planning, our team aligns art, engineering, design, and audio around one goal: memorable worlds that play as good as they look."
+      "Founded in early 2020 during the COVID-19 pandemic by Oliver Earl and Shane Fenton, Petrobolos (literally ancient Greek for stone thrower) began as a passion project to make the most of long periods of downtime and isolation that characterised the start of the decade.",
+      "Today, Petrobolos is building exciting new experiences targeting home computers, video game consoles, and mobile platforms, as well as the technology to empower other game developers all over the world."
     ],
     "image": {
       "src": "/static/petrobolos-dark.jpg",

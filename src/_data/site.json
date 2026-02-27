@@ -3,8 +3,8 @@
   "titleSuffix": "Petrobolos Games",
   "url": "https://www.petrobolos.com",
   "meta": {
-    "description": "Petrobolos Games – Placeholder site built with Eleventy and Tailwind CSS.",
-    "image": "/static/petrobolos-silver.webp",
+    "description": "Petrobolos Games is an independent games studio based in the UK.",
+    "image": "/static/logo.jpg",
     "twitter": "@PetrobolosGames"
   },
   "nav": [
