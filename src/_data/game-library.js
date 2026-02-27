@@ -3,18 +3,18 @@ const gameLibrary = [
     id: "a-dog-tale",
     title: "A Dog Tale",
     catalog: {
-      subtitle: "Galactic Journey",
+      subtitle: "2D Platformer / Mixed",
       description:
-        "Suspendisse potenti. Donec luctus nisl at massa aliquet, non ultrices lectus consectetur.",
+        "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
       image: "/static/games/a-dog-tale/library.jpg",
       url: "/games/a-dog-tale/",
-      status: "Vertical Slice",
+      status: "In Active Development",
     },
     homepageFeature: {
       enabled: true,
-      subtitle: "Galactic Journey",
+      subtitle: "One man risks all to rescue his best friend.",
       description:
-        "Suspendisse potenti. Donec luctus nisl at massa aliquet, non ultrices lectus",
+        "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
       background: "/static/home/banner.jpg",
       image: "/static/home/logo.webp",
     },
@@ -31,13 +31,13 @@ const gameLibrary = [
         },
         ctas: [
           {
-            label: "Learn More",
-            href: "#media",
+            label: "Where to Buy",
+            href: "#platforms",
             classes: "bg-primary-600 text-white hover:bg-primary-500",
           },
           {
-            label: "View Platforms",
-            href: "#platforms",
+            label: "View Trailer",
+            href: "#media",
             classes:
               "border border-slate-300/50 bg-slate-900/30 text-slate-100 hover:bg-slate-800/50",
           },
@@ -122,7 +122,7 @@ const gameLibrary = [
       },
       platforms: {
         id: "platforms",
-        title: "Platforms",
+        title: "Where To Buy",
         subtitle: "",
         items: [
           {
@@ -196,34 +196,6 @@ const gameLibrary = [
             },
           },
           {
-            id: "android",
-            description: "",
-            links: [
-              {
-                label: "Google Play",
-                url: "#",
-              },
-            ],
-            status: {
-              label: "Delayed to Spring 2027",
-              class: "bg-sky-100 text-sky-700",
-            },
-          },
-          {
-            id: "ios",
-            description: "",
-            links: [
-              {
-                label: "App Store",
-                url: "#",
-              },
-            ],
-            status: {
-              label: "Delayed to Spring 2027",
-              class: "bg-sky-100 text-sky-700",
-            },
-          },
-          {
             id: "playstation",
             description: "",
             links: [
@@ -282,30 +254,28 @@ const gameLibrary = [
     },
   },
   {
-    id: "project-nimbus",
-    title: "Project Nimbus",
+    id: "escape-from-hong-kong",
+    title: "Escape from Hong Kong",
     catalog: {
-      subtitle: "Skybound Adventure",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short description placeholder.",
-      image: "/static/petrobolos-silver.webp",
-      url: "/games/#project-nimbus",
-      status: "Pre-Production",
+      subtitle: "Bullet Heaven / Shoot 'em Up",
+      description: "Escaping from a 22nd century Hong Kong prison? No problem.",
+      image: "/static/games/escape-from-hong-kong/library.jpg",
+      url: "/games/#escape-from-hong-kong",
+      status: "In Early Access Testing",
     },
-    releasePlatforms: ["web"],
+    releasePlatforms: ["windows", "macos", "linux"],
   },
   {
-    id: "echoes-of-ember",
-    title: "Echoes of Ember",
+    id: "nimbus-engine",
+    title: "Nimbus Engine",
     catalog: {
-      subtitle: "Mystic Realms",
-      description:
-        "Integer ac dui vitae augue egestas interdum. Placeholder copy for a game description.",
-      image: "/static/petrobolos-silver.webp",
-      url: "/games/#echoes-of-ember",
-      status: "Concept & Prototyping",
+      subtitle: "Game Engine",
+      description: "Build your own web-based battle simulators.",
+      image: "/static/games/nimbus-engine/library.jpg",
+      url: "/games/#nimbus-engine",
+      status: "In Active Development",
     },
-    releasePlatforms: ["windows", "macos", "android", "ios"],
+    releasePlatforms: ["web"],
   },
 ];
 
