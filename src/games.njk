@@ -3,20 +3,13 @@ layout: layouts/base.njk
 title: Our Games
 description: Explore games by Petrobolos Games.
 ---
+{% from "components/page-header.njk" import page_header %}
 
-<section class="relative overflow-hidden bg-slate-950 py-14">
-  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-    <div class="absolute left-1/4 top-0 h-52 w-52 rounded-full bg-primary-500/20 blur-3xl"></div>
-    <div class="absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-cyan-400/15 blur-3xl"></div>
-  </div>
-  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    <p class="text-xs font-semibold uppercase tracking-wider text-primary-200">Our Games</p>
-    <h1 class="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight text-white md:text-5xl">Three worlds in active development, each with its own identity.</h1>
-    <p class="mt-4 max-w-2xl text-slate-300">
-      We are intentionally focused: fewer projects, higher quality, and clearer platform strategy.
-    </p>
-  </div>
-</section>
+{{ page_header({
+  eyebrow: "Our Games",
+  title: "Three worlds in active development, each with its own identity.",
+  subtitle: "We are intentionally focused: fewer projects, higher quality, and clearer platform strategy."
+}) }}
 
 <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
   <div class="space-y-8">
