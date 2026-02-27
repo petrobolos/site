@@ -9,7 +9,7 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 - Header with desktop nav and accessible mobile menu toggle (aria-expanded/aria-controls)
 - Large hero section on Home with the “Petrobolos Games” name
 - Project Nimbus section, Latest News cards
-- Data-driven “Our Games” grid via `src/_data/games.json`
+- Data-driven game content from a single source via `src/_data/game-library.js`
 - Semantic HTML (header, nav, main, footer, section, article)
 - Accessibility: alt text for images, keyboard-friendly menu, visible focus styles, skip link
 - SEO: per-page title/description, canonical, Open Graph & Twitter metadata
@@ -25,7 +25,10 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 ├─ src/
 │  ├─ _data/
 │  │  ├─ site.json           # Site metadata, nav items, social links
-│  │  └─ games.json          # Games data (edit to add new games)
+│  │  ├─ game-library.js     # Canonical game data (catalog + featured + project pages)
+│  │  ├─ games.js            # Derived games list for homepage/catalog templates
+│  │  ├─ featured.js         # Derived featured game data for homepage
+│  │  └─ projects/           # Derived project page payloads keyed by game id
 │  ├─ _includes/
 │  │  ├─ layouts/base.njk    # Base HTML layout with SEO and Tailwind
 │  │  └─ partials/           # Header and footer includes
@@ -85,20 +88,14 @@ This project uses the Tailwind CDN for simplicity, which serves a minified build
 For the scope of this project, the CDN meets the requirements and keeps the setup minimal.
 
 ## Add/Update Games
-Edit `src/_data/games.json` to add new game entries:
-```json
-[
-  {
-    "id": "project-nimbus",
-    "title": "Project Nimbus",
-    "subtitle": "Skybound Adventure",
-    "description": "Short description...",
-    "image": "https://via.placeholder.com/800x450.png?text=Project+Nimbus",
-    "url": "/games/#project-nimbus"
-  }
-]
-```
-These are rendered automatically by `src/games.njk`.
+Edit `src/_data/game-library.js` to add or update game entries.
+- `catalog` fields drive the homepage and games catalog cards.
+- `projectPage` fields drive an individual game page when that page exists.
+- Platform availability should be declared in one place:
+  - Detailed pages: `projectPage.platforms.items`
+  - Games without detailed pages: `releasePlatforms`
+
+`src/_data/games.js`, `src/_data/featured.js`, and `src/_data/projects/*.js` are derived from this single source.
 
 ## Accessibility notes
 - Mobile menu button manages `aria-expanded` and controls the menu via `aria-controls`

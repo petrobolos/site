@@ -180,13 +180,13 @@
         <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">{{ entry.description }}</p>
         {% endif %}
 
-        {{ platform_links(entry, storefront_catalog) }}
-
         {% if entry.status %}
         <span class="mt-4 inline-flex rounded-full px-3 py-1 text-xs font-semibold {{ entry.status.class }}">
           {{ entry.status.label }}
         </span>
         {% endif %}
+
+        {{ platform_links(entry, storefront_catalog) }}
       </article>
       {% endfor %}
     </div>

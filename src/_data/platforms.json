@@ -19,6 +19,10 @@
     "name": "iOS",
     "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/apple.svg"
   },
+  "web": {
+    "name": "Web",
+    "icon": "https://cdn.jsdelivr.net/npm/simple-icons@16.7.0/icons/html5.svg"
+  },
   "playstation": {
     "name": "PlayStation\u00ae",
     "icon": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/playstation.svg"
