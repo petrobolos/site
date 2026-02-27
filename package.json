@@ -4,8 +4,9 @@
   "private": true,
   "description": "Static website for Petrobolos Games built with Eleventy and Tailwind CSS",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "build:css": "bash scripts/build-tailwind.sh",
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "serve": "npm run build:css && npx @11ty/eleventy --serve",
     "clean": "rimraf _site"
   },
   "devDependencies": {

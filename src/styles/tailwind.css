@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .prose {
+    color: rgb(51 65 85);
+  }
+
+  .prose :where(h1, h2, h3, h4) {
+    color: rgb(15 23 42);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .prose :where(h2, h3, h4) {
+    margin-top: 1.5rem;
+  }
+
+  .prose :where(p, ul, ol) {
+    margin-top: 0.75rem;
+  }
+
+  .prose :where(ul, ol) {
+    padding-left: 1.25rem;
+  }
+
+  .prose :where(ul) {
+    list-style: disc;
+  }
+
+  .prose :where(ol) {
+    list-style: decimal;
+  }
+
+  .prose :where(li + li) {
+    margin-top: 0.35rem;
+  }
+
+  .prose :where(a) {
+    color: rgb(67 56 202);
+    font-weight: 600;
+  }
+
+  .prose :where(a:hover) {
+    color: rgb(55 48 163);
+  }
+
+  .dark .dark\:prose-invert {
+    color: rgb(203 213 225);
+  }
+
+  .dark .dark\:prose-invert :where(h1, h2, h3, h4) {
+    color: rgb(248 250 252);
+  }
+
+  .dark .dark\:prose-invert :where(a) {
+    color: rgb(165 180 252);
+  }
+
+  .dark .dark\:prose-invert :where(a:hover) {
+    color: rgb(199 210 254);
+  }
+}

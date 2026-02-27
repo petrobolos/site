@@ -13,7 +13,7 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 - Semantic HTML (header, nav, main, footer, section, article)
 - Accessibility: alt text for images, keyboard-friendly menu, visible focus styles, skip link
 - SEO: per-page title/description, canonical, Open Graph & Twitter metadata
-- Tailwind CSS via CDN (minified) for a no-build CSS setup; easily switch to a local build if preferred
+- Tailwind CSS compiled locally into a static stylesheet (no runtime CDN dependency)
 - Ready for Netlify (or similar) deployment
 
 ## Directory structure
@@ -21,7 +21,10 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 .
 ├─ .eleventy.js               # Eleventy config
 ├─ netlify.toml               # Netlify build settings
-├─ package.json               # Scripts: build / serve
+├─ package.json               # Scripts: build:css / build / serve
+├─ tailwind.config.js         # Tailwind theme/content configuration
+├─ scripts/
+│  └─ build-tailwind.sh       # Builds Tailwind CSS using standalone CLI
 ├─ src/
 │  ├─ _data/
 │  │  ├─ site.json           # Site metadata, nav items, social links
@@ -32,7 +35,10 @@ Note: All text content is placeholder (except the company name “Petrobolos Gam
 │  ├─ _includes/
 │  │  ├─ layouts/base.njk    # Base HTML layout with SEO and Tailwind
 │  │  └─ partials/           # Header and footer includes
+│  ├─ styles/
+│  │  └─ tailwind.css        # Tailwind input file (@tailwind directives)
 │  ├─ static/
+│  │  ├─ css/tailwind.css    # Compiled Tailwind output
 │  │  └─ favicon.svg         # Simple favicon
 │  ├─ index.njk              # Home
 │  ├─ games.njk              # Our Games
@@ -79,13 +85,14 @@ npm run build
 Netlify configuration is also included in `netlify.toml`.
 
 ## Using Tailwind CSS
-This project uses the Tailwind CDN for simplicity, which serves a minified build. If you want a fully optimized, purged CSS bundle, you can switch to a local Tailwind build:
+Tailwind is compiled locally before Eleventy builds the site:
 
-- Install: `npm i -D tailwindcss postcss autoprefixer @11ty/eleventy`
-- Create `tailwind.config.js` and `postcss.config.js`
-- Compile a CSS file and include it in `base.njk` instead of the CDN script
+- Input: `src/styles/tailwind.css`
+- Config: `tailwind.config.js`
+- Output: `src/static/css/tailwind.css`
+- Build command: `npm run build:css`
 
-For the scope of this project, the CDN meets the requirements and keeps the setup minimal.
+The build script uses the Tailwind standalone CLI binary and caches it in `.cache/`.
 
 ## Add/Update Games
 Edit `src/_data/game-library.js` to add or update game entries.
