@@ -4,8 +4,7 @@ const gameLibrary = [
     title: "A Dog Tale",
     catalog: {
       subtitle: "2D Platformer / Mixed",
-      description:
-        "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
+      description: "One man risks all to rescue his best friend.",
       image: "/static/games/a-dog-tale/library.jpg",
       url: "/games/a-dog-tale/",
       status: "In Active Development",
