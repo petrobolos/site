@@ -1,5 +1,7 @@
 # Petrobolos Games Site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da721fdb-dee8-40b7-aa95-375d39a34d0d/deploy-status)](https://app.netlify.com/projects/petrobolos/deploys)
+
 Public source for the Petrobolos Games marketing website.
 
 ## Stack
