@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: A Dog Tale
-description: Explore A Dog Tale with gameplay highlights, screenshots, trailers, and platform availability.
+title: Escape from Hong Kong
+description: Explore Escape from Hong Kong with gameplay highlights, screenshots, trailers, and platform availability.
 ---
 {% if not projectPagesEnabled %}
 <section class="mx-auto flex max-w-3xl flex-col items-center px-4 py-20 text-center sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ description: Explore A Dog Tale with gameplay highlights, screenshots, trailers,
   </script>
 </section>
 {% else %}
-{% set project = projects["a-dog-tale"] %}
+{% set project = projects["escape-from-hong-kong"] %}
 {% from "components/project-sections.njk" import project_hero, feature_grid, screenshots_section, media_section, platforms_section %}
 
 {{ project_hero(project) }}

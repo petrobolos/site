@@ -17,6 +17,7 @@ const gameLibrary = [
         "A sequel to the beloved Net Yaroze classic, follow Ira as he crosses both worlds and genres to rescue his beloved dog.",
       background: "/static/games/a-dog-tale/banner.jpg",
       image: "/static/games/a-dog-tale/logo.webp",
+      releaseDate: "Autumn 2026",
     },
     projectPage: {
       subtitle: "One man risks all to rescue his best friend.",
@@ -260,10 +261,9 @@ const gameLibrary = [
       subtitle: "Bullet Heaven / Shoot 'em Up",
       description: "Democracy or Autocracy. You decide.",
       image: "/static/games/escape-from-hong-kong/library.jpg",
-      url: "/games/#escape-from-hong-kong",
+      url: "/games/escape-from-hong-kong/",
       status: "In Early Access Testing",
     },
-    releasePlatforms: ["windows", "macos", "linux"],
     homepageFeature: {
       enabled: true,
       subtitle: "Democracy or Autocracy. You decide.",
@@ -272,6 +272,182 @@ const gameLibrary = [
       background: "/static/games/escape-from-hong-kong/banner.jpg",
       image: "/static/games/escape-from-hong-kong/logo.webp",
       releaseDate: "Summer 2026",
+    },
+    projectPage: {
+      subtitle: "Democracy or Autocracy. You decide.",
+      hero: {
+        eyebrow: "",
+        background: "/static/games/escape-from-hong-kong/banner.jpg",
+        description:
+          "Let the light of the cosmos shine within you as you fight to survive never-ending guards, soldiers, and world-ending war machines.",
+        logo: {
+          src: "/static/games/escape-from-hong-kong/logo.webp",
+          alt: "Escape from Hong Kong logo",
+        },
+        ctas: [
+          {
+            label: "Where to Buy",
+            href: "#platforms",
+            classes: "bg-primary-600 text-white hover:bg-primary-500",
+          },
+          {
+            label: "View Trailer",
+            href: "#media",
+            classes:
+              "border border-slate-300/50 bg-slate-900/30 text-slate-100 hover:bg-slate-800/50",
+          },
+        ],
+        stats: [
+          {
+            label: "Genre",
+            value: "Bullet Heaven / Shoot 'em Up",
+          },
+          {
+            label: "Release Date",
+            value: "Summer 2026",
+          },
+          {
+            label: "Mode",
+            value: "Single Player",
+          },
+          {
+            label: "Status",
+            value: "In Early Access Testing",
+            valueClass: "text-emerald-300",
+          },
+        ],
+      },
+      features: [
+        {
+          title: "High-intensity survival combat",
+          description:
+            "Face relentless waves of guards, soldiers, and heavy war machines in escalating battle arenas.",
+        },
+        {
+          title: "Build-defining upgrades",
+          description:
+            "Stack weapon evolutions and passive modifiers to craft powerful runs with distinct playstyles.",
+        },
+        {
+          title: "Political stakes, arcade pace",
+          description:
+            "Cut through authoritarian forces in a fast-moving shooter built around risk, momentum, and replayability.",
+        },
+      ],
+      screenshots: {
+        id: "screenshots",
+        title: "Screenshots",
+        subtitle:
+          "Please note, that screenshots represent a current work-in-progress and are not necessarily indicative of the final product.",
+        items: [
+          {
+            type: "image",
+            src: "/static/games/escape-from-hong-kong/library.jpg",
+            alt: "Escape from Hong Kong gameplay screenshot",
+          },
+          {
+            type: "image",
+            src: "/static/games/escape-from-hong-kong/banner.jpg",
+            alt: "Escape from Hong Kong key art banner",
+          },
+          {
+            type: "text",
+            text: "More screenshots to come soon.",
+            wrapperClass: "md:col-span-2",
+          },
+        ],
+      },
+      media: {
+        id: "media",
+        title: "Trailers & Videos",
+        subtitle: "See the latest related media.",
+        embed: {
+          url: "https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ?rel=0",
+          title: "Escape from Hong Kong trailer placeholder",
+        },
+        helper: "In-game footage may not represent final product.",
+        slots: {
+          title: "Media Slots",
+          items: [
+            "Announcement Trailer",
+            "Gameplay Showcase",
+            "Developer Diary",
+          ],
+        },
+      },
+      platforms: {
+        id: "platforms",
+        title: "Where To Buy",
+        subtitle: "",
+        items: [
+          {
+            id: "windows",
+            description: "",
+            stores: [
+              {
+                id: "steam",
+                url: "#",
+              },
+              {
+                id: "epic",
+                url: "#",
+              },
+              {
+                id: "itch",
+                url: "#",
+              },
+            ],
+            status: {
+              label: "Early access planned",
+              class: "bg-emerald-100 text-emerald-700",
+            },
+          },
+          {
+            id: "macos",
+            description: "",
+            stores: [
+              {
+                id: "steam",
+                url: "#",
+              },
+              {
+                id: "epic",
+                url: "#",
+              },
+              {
+                id: "itch",
+                url: "#",
+              },
+            ],
+            status: {
+              label: "Planned",
+              class: "bg-slate-200 text-slate-700",
+            },
+          },
+          {
+            id: "linux",
+            description: "",
+            stores: [
+              {
+                id: "steam",
+                url: "#",
+              },
+              {
+                id: "epic",
+                url: "#",
+              },
+              {
+                id: "itch",
+                url: "#",
+              },
+            ],
+            status: {
+              label: "Planned",
+              class: "bg-slate-200 text-slate-700",
+            },
+          },
+        ],
+      },
     },
   },
   {
