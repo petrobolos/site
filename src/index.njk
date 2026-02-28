@@ -32,12 +32,20 @@ description: Welcome to Petrobolos Games. Discover our worlds and latest news.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
+            {% if projectPagesEnabled %}
             <a
               href="{{ featured.url }}"
               class="inline-flex items-center rounded-md bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-500"
             >
               Explore {{ featured.title }}
             </a>
+            {% else %}
+            <span
+              class="inline-flex cursor-not-allowed items-center rounded-md bg-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 dark:bg-slate-700 dark:text-slate-300"
+            >
+              Coming soon
+            </span>
+            {% endif %}
             <a
               href="/games/"
               class="inline-flex items-center rounded-md border border-white/30 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
@@ -91,7 +99,11 @@ description: Welcome to Petrobolos Games. Discover our worlds and latest news.
         <h3 class="mt-2 text-xl font-bold text-slate-900 dark:text-white">{{ game.title }}</h3>
         <p class="mt-3 text-sm text-slate-600 line-clamp-3 dark:text-slate-300">{{ game.description }}</p>
         <div class="mt-5">
+          {% if projectPagesEnabled %}
           <a href="{{ game.url }}" class="text-sm font-semibold text-primary-700 hover:text-primary-800 dark:text-primary-300">Open project<span aria-hidden="true"> →</span></a>
+          {% else %}
+          <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Coming soon</span>
+          {% endif %}
         </div>
       </div>
     </article>
