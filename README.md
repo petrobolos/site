@@ -1,5 +1,7 @@
 # Petrobolos Games – Static Site (Eleventy + Tailwind)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/da721fdb-dee8-40b7-aa95-375d39a34d0d/deploy-status)](https://app.netlify.com/projects/petrobolos/deploys)
+
 This repository contains a responsive, accessible, SEO-friendly static website for Petrobolos Games, built with the Eleventy static-site generator and styled with Tailwind CSS utilities.
 
 Note: All text content is placeholder (except the company name “Petrobolos Games”). All images use placeholders with approximate dimensions.
